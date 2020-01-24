@@ -52,3 +52,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+COPY face_detect.py /media/code/
+COPY haarcascade_frontalface_default.xml /media/code/

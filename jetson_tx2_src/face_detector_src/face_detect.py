@@ -26,7 +26,7 @@ def clock():
     return cv.getTickCount() / cv.getTickFrequency()
 
 def main():
-    face_cascade = cv.CascadeClassifier('/usr/share/opencv4/haarcascades/haarcascade_frontalface_default.xml')
+    face_cascade = cv.CascadeClassifier('/media/code/haarcascade_frontalface_default.xml')
 
     cap = cv.VideoCapture(0)
 
