@@ -20,5 +20,5 @@ RUN pip install paho-mqtt
 COPY persist_image.py /media/code/
 
 WORKDIR /media/code
-CMD ["/bin/bash"]
-#CMD ["./forwarder.py"]
+#CMD ["/bin/bash"]
+CMD ["./persist_image.py"]
