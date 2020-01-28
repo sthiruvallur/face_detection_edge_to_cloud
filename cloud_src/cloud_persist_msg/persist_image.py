@@ -2,9 +2,10 @@
 
 import paho.mqtt.client as mqtt
 import uuid
+import sys
 
 
-LOCAL_MQTT_HOST="10.190.17.195"
+LOCAL_MQTT_HOST="169.62.47.162"
 LOCAL_MQTT_PORT=1883
 LOCAL_MQTT_TOPIC="persist_faces"
 
@@ -18,7 +19,7 @@ def on_message(client,userdata, msg):
     # Publishing this message to the cloud broker
     guid = str(uuid.uuid4())
     msg = msg.payload
-    file_path = '/var/data/w251/hw/homework3/images/' + "detect_faces" + guid + ".png"
+    file_path = "/mnt/w251-homework3/" + "detect_faces" + guid + ".png"
     with open(file_path, 'wb') as outfile:
       outfile.write(msg)
   except:

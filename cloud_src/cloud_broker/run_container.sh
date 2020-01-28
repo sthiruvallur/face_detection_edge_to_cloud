@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+#Ensuring the network bridge is created
+./create_network_bridge.sh > /dev/null 2>&1
+
 docker run --name mosquitto_broker \
 --network hw03 \
 -p 1883:1883 \

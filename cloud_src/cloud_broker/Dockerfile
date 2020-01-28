@@ -15,4 +15,10 @@ RUN apk update && apk add --no-cache ca-certificates
 
 RUN apk add --no-cache mosquitto
 
-CMD ["mosquitto"]
+EXPOSE 1883
+
+COPY mqtt_cloud_broker.conf /media/conf/
+
+WORKDIR /media/conf
+
+CMD ["mosquitto", "-c", "/media/conf/mqtt_cloud_broker.conf"]

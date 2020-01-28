@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build -t msg_forwarder -f Dockerfile .
+docker build -t persist_msg -f Dockerfile .
